@@ -4,12 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write **/*",
+    "lint": "eslint assets/js/",
+    "watch:prettier": "chokidar '**/*' -c 'npm run format'",
+    "watch:eslint": "chokidar 'assets/js/**/*.{js}' -c 'npm run lint'",
+    "watch": "npm-run-all --parallel watch:prettier watch:eslint"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "chokidar-cli": "^3.0.0",
+    "eslint": "^9.19.0",
+    "eslint-config-prettier": "^10.0.1",
+    "globals": "^15.14.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "^3.4.2"
   }
 }
