@@ -2,7 +2,7 @@ export const LoadMore = () => {
   document.addEventListener('DOMContentLoaded', () => {
     const list = document.querySelector('#item-list');
     const loadMoreBtn = document.querySelector('#load-more');
-    let page = 1; // ページ番号
+    // let page = 1; // ページ番号
     let loading = false; // ロード中のフラグ
 
     // データを取得して表示する関数
@@ -23,7 +23,7 @@ export const LoadMore = () => {
             li.textContent = item.title;
             list.appendChild(li);
           });
-          page++;
+          // page++;
         } else {
           loadMoreBtn.textContent = 'これ以上データはありません';
           loadMoreBtn.disabled = true;
