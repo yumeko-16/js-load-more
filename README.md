@@ -1,1 +1,1 @@
-# js-load-more
+# Load more button
